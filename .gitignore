@@ -1,0 +1,48 @@
+# Dependencias de Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+
+# Archivos de lock de dependencias (opcional)
+package-lock.json
+yarn.lock
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pm2.log
+
+# Directorios de cobertura de pruebas
+coverage/
+
+# Directorios de compilación
+build/
+dist/
+out/
+
+# Caches de módulos y herramientas
+.cache/
+.tmp/
+.vscode/
+.idea/
+.DS_Store
+
+# Archivos relacionados con el sistema operativo
+Thumbs.db
+Desktop.ini
+
+# Configuraciones de procesos específicos
+pm2/
+
+# Certificados SSL (si es que los generas en desarrollo)
+*.pem
+*.key
+*.crt
