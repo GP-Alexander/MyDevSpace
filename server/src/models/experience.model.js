@@ -14,6 +14,12 @@ import {Schema } from 'mongoose';
         required: true,
         trim: true
     },
+    location: {
+        type: String,
+        required: true,
+        trim: true
+    },
+
     startDate: {
         type: Date,
         required: true
