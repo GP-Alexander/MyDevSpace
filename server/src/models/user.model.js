@@ -1,9 +1,8 @@
 import mongoose from "mongoose";
 import { Schema } from "mongoose";
 
-// Definición del esquema para los roles
-const adminSchema = new Schema({
-
+// Definición del esquema para los usuarios
+const userSchema = new Schema({
     firstname: {
         type: String,
         required: true,
@@ -14,7 +13,6 @@ const adminSchema = new Schema({
         required: true,
         trim: true
     },
-
     username: {
         type: String,
         required: true,
@@ -34,18 +32,16 @@ const adminSchema = new Schema({
         required: true,
     },
     role: {
-        type: [String],
+        type: String,
         required: true,
-        default: ["user"],  
+        default: "user",  
         enum: ["user", "admin", "superadmin"]
     },
-    permissions:
-    {
+    permissions: {
         type: [String],
         required: true,
         default: []
     },
-
     status: {
         type: Boolean,
         default: true
@@ -54,13 +50,8 @@ const adminSchema = new Schema({
         type: String,
         default: "http://www.gravatar.com/avatar/?d=mp"
     },
+}, {
+    timestamps: true
+});
 
-},
-    {
-        timestamps: true
-    }
-
-
-);
-
-export default mongoose.model('User', adminSchema);
+export default mongoose.model('User', userSchema);
